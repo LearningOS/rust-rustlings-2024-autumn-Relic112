@@ -37,11 +37,13 @@ impl<T> Default for LinkedList<T> {
 
 impl<T> LinkedList<T> {
     pub fn new() -> Self {
+
         Self {
             length: 0,
             start: None,
             end: None,
         }
+
     }
 
     pub fn add(&mut self, obj: T) {
@@ -76,6 +78,19 @@ impl<T> LinkedList<T> {
             length: 0,
             start: None,
             end: None,
+        }
+        let mut list_c=LinkedList::<T>::new(i32);
+        let mut a=a.start;
+        let mut b=b.start;
+        while a.id_some()&&b.is_some(){
+            if a.val<=b.val{
+                list_c.add(a.val);
+                a=a.next:
+            }
+            else{
+                list_c.add(b.val);
+                b=b.next;
+            }
         }
 	}
 }
