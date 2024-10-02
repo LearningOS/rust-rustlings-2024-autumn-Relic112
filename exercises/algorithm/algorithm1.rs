@@ -92,6 +92,15 @@ impl<T> LinkedList<T> {
                 b=b.next;
             }
         }
+        while a.is_some(){
+            list_c.add(a.val);
+            a=a.next;
+        }
+        while b.is_some(){
+            list_c.add(b.val);
+            b=b.next;
+        }
+        list_c
 	}
 }
 
