@@ -3,11 +3,15 @@
 // Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+
 
 #[derive(Debug)]
 enum Message {
     // TODO: define the different variants used below
+    Move{x:i32,y:i32},
+    Echo{S:String},
+    ChangeColor{a:i32,b:i32,c:i32}, 
+    Quit,
 }
 
 impl Message {
@@ -19,8 +23,8 @@ impl Message {
 fn main() {
     let messages = [
         Message::Move { x: 10, y: 30 },
-        Message::Echo(String::from("hello world")),
-        Message::ChangeColor(200, 255, 255),
+        Message::Echo{S:String::from("hello world")},
+        Message::ChangeColor{a:200, b:255, c:255},
         Message::Quit,
     ];
 
